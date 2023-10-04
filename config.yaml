@@ -1,0 +1,30 @@
+base:
+  model: "CombinedNetwork-5ch168"
+  gpu_id: 0
+  mode: "training"
+  hyper_params:
+    classes: 1
+    batch_size: 4
+    pixels_cut: 43
+datasets:
+  training:
+    dir_inputs: "path/input"
+    dir_masks: "path/label"
+  validation:
+    dir_inputs: "path/input"
+    dir_masks: "path/label"
+  test:
+    dir_inputs: "data/APACS23_Test_Input"
+    dir_masks: "data/APACS23_Test_GroundTruth"
+modes:
+  training:
+    hyper_params:
+      epochs: 100
+      lr: 0.0001
+    checkpoints:
+      saving_frequency: 25
+      saving_directory: "network_checkpoints"
+  test:
+    checkpoint: "fill_me"
+    saving_directory: "test_results"
+    tag: "best"
