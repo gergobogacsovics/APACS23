@@ -13,6 +13,11 @@ The repository also contains the various helper scripts (e.g. for loading and no
 To run the script, use the command
 `python main.py`
 
-# Training
+The user can use the config.yaml file to change between training and test modes, set hyperparameters, number of classes (1=binary) and configure the input and output directories.
 
-# Test
+## Training
+
+Use `mode: "training"`, configure the batch size and set the dataset locations (both inputs and ground truths) under the `datasets` section. Finally, set the number of epochs and learning rate under the `modes: training` section.
+
+## Test
+Use `mode: "test"`, configure the batch size and set the dataset locations (both inputs and ground truths) under the `datasets` section. Finally, set the checkpoint location (".pth" file) and saving directory under the `modes: test` section.
