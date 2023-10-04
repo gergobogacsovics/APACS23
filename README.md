@@ -17,13 +17,18 @@ The user can use the config.yaml file to change between training and test modes,
 
 The supported model names are:
 ```
-"FCN-32" > FCN-32 network
-"FCN-16"&nbsp;FCN-16 network
-"FCN-8"&nbsp;FCN-8 network
-"CombinedNetwork-6ch"&nbsp;A combined architecture using the outputs of some pre-trained FCN-32, FCN-16, and FCN-8 networks
-"CombinedNetwork-5ch-32-16"&nbsp;A combined architecture using the outputs of some pre-trained FCN-32 and FCN-16 networks
-"CombinedNetwork-5ch-32-8"&nbsp;A combined architecture using the outputs of some pre-trained FCN-32 and FCN-8 networks
-"CombinedNetwork-5ch-16-8"&nbsp;A combined architecture using the outputs of some pre-trained FCN-16 and FCN-8 networks
+Base networks:
+
+"FCN-32"   FCN-32 network
+"FCN-16"   FCN-16 network
+"FCN-8"    FCN-8 network
+
+Combined architectures:
+
+"CombinedNetwork-6ch"          A combined architecture using the outputs of some pre-trained FCN-32, FCN-16, and FCN-8 networks
+"CombinedNetwork-5ch-32-16"    A combined architecture using the outputs of some pre-trained FCN-32 and FCN-16 networks
+"CombinedNetwork-5ch-32-8"     A combined architecture using the outputs of some pre-trained FCN-32 and FCN-8 networks
+"CombinedNetwork-5ch-16-8"     A combined architecture using the outputs of some pre-trained FCN-16 and FCN-8 networks
 ```
 
 Before training any combined networks, make sure to first train the corresponding base FCN networks, and set their paths in the utils.py correspondingly ("fill_me" fields).
