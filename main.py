@@ -11,7 +11,7 @@ import cv2
 import math
 from shutil import copyfile
 from helper import ImageLoader, ImageDataset
-from utils import LogLevel, Logger, Networks, get_network, ConfigLoader
+from utils import Networks, get_network, ConfigLoader
 from constants import COLOR_CODES_BY_CLASS
 import signal
 import sys
