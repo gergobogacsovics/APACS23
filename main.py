@@ -36,17 +36,16 @@ logging.info(f"Images will be saved to the following directory: {IMG_SAVE_DIR}."
 os.makedirs(IMG_SAVE_DIR)
 
 model = get_network(model_name, num_classes, pixels_cut)
-
+print("model")
 if torch.cuda.device_count() > 1:
   print("Let's use", torch.cuda.device_count(), "GPUs!")
 
 logging.info(f"Using {torch.cuda.device_count()} GPUS.")
 
-model = nn.DataParallel(model)
 model.to(device)
 
 if config["base"]["mode"] == "training":
-    logging.info("Entering training mode.", LogLevel.INFO)
+    logging.info("Entering training mode.")
     
     train_dir_in = config["datasets"]["training"]["dir_inputs"]
     train_dir_out = config["datasets"]["training"]["dir_masks"]
