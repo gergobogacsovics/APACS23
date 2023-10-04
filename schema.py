@@ -132,10 +132,6 @@
                     'saving_directory': {
                         'required': True,
                         'type': 'string'
-                    },
-                    'tag': {
-                        'required': True,
-                        'type': 'string'
                     }
                 }
             }
