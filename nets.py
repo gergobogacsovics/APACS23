@@ -6,6 +6,9 @@ import torch.nn.functional as F
 from torch.autograd import Variable
 import numpy as np
 
+# The implementations of the base FCN-32, FCN-16, and FCN-8 architectures have been
+# adapted and modified from the pytorch-fcn library (https://github.com/wkentaro/pytorch-fcn/tree/main).
+
 class FCN32(nn.Module):
     def __init__(self, number_of_classes, pixels_cut):
         super(FCN32, self).__init__()
